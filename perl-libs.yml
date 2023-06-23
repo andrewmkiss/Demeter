@@ -772,11 +772,9 @@
     - (make_install perl-libs/Pod-Parser)
     - (make_install perl-libs/Text-Balanced)
     - (make_install perl-libs/IO-All)
-    # Alien::HDF4: reqs hdf shared lib
     - (make_install perl-libs/Alien-HDF4)
     - (make_install perl-libs/PDL)
     - (make_install perl-libs/PDL-Stats)
-    - chmod 755 /app/bin/pdl*
     - (make_install perl-libs/Net-SSLeay)
     - (make_install perl-libs/Mozilla-CA)
     - (make_install perl-libs/IO-Socket-SSL)
@@ -834,7 +832,9 @@
     - ldconfig
     # ## Install Alien-wxWidget
     - cd ../perl-libs/Alien-wxWidgets
-    - perl Build.PL --wxWidgets-build=0 && ./Build && ./Build install
+    - perl Build.PL --wxWidgets-build=0
+    - ./Build
+    - ./Build install
     # ## Install Wx
     - cd ../Wx
     - tar -xzf Wx-0.9932.tar.gz
@@ -844,13 +844,6 @@
     - sed -i 's/mv/if [ -f GDI.xsc ]; then sed -i "12704s\/THIS->GetPixel()\/NULL\/" GDI.xsc; fi; mv/' Makefile
     - make
     - make install
-    # ## Install demeter
-    # cd ../../demeter
-    # export PERL5LIB=/run/build/perl-libs/perl-libs/demeter
-    # echo PERL5LIB    $PERL5LIB
-    # perl Build.PL
-    # ./Build
-    # ./Build install
   dest: perl-libs
   dest-filename: install.sh
   type: script

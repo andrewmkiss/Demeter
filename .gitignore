@@ -1,4 +1,4 @@
-~.swp
+*.swp
 build.log
 .flatpak-builder/
 build-dir/
