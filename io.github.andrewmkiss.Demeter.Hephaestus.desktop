@@ -2,10 +2,10 @@
 Version=1.0
 Type=Application
 
-Name=Athena
+Name=Hephaestus
 Comment=Process X-ray Absorption Spectroscopy Data
 Categories=Science;Physics;
 
-Icon=io.github.andrewmkiss.Demeter.Athena
-Exec=dathena
+Icon=io.github.andrewmkiss.Demeter
+Exec=dhephaestus
 Terminal=false
