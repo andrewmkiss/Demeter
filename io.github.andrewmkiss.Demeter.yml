@@ -176,9 +176,10 @@ modules:
     post-install:
       - 'chmod u+w /app/lib/perl5/site_perl/5.36.1/x86_64-linux/auto/Ifeffit/Ifeffit.so'
     sources:
-      - type: archive
-        url: https://github.com/bruceravel/demeter/archive/refs/tags/0.9.27.tar.gz
-        sha256: 642bc911756445a3f5f15057fa666d1d8fbdd0e3757fe70d324cb3c4be23e575
+      - type: git
+        url: https://github.com/bruceravel/demeter
+        branch: master
+        commit: edfaa0904fa30426cf303b5933450edf22a426ec
       - type: file
         path: io.github.andrewmkiss.Demeter.metainfo.xml
       - type: file
