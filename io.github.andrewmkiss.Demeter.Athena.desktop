@@ -1,0 +1,13 @@
+# Install as /usr/share/applications/io.github.andrewmkiss.Demeter.desktop
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+
+Name=Athena
+Comment=Process X-ray Absorption Spectroscopy Data
+Categories=Science;Physics;
+
+Icon=dathena
+Exec=dathena
+Terminal=false
