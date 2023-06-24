@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Install as /usr/share/metainfo/io.github.andrewmkiss.Demeter.metainfo.xml -->
+
+<component type="desktop-application">
+  <id>io.github.andrewmkiss.Demeter</id>
+  <!-- TODO
+  <launchable type="desktop-id">io.github.andrewmkiss.Demeter.desktop</launchable>
+    -->
+  
+  <name>Demeter</name>
+  <summary>Process X-ray Absorption Spectroscopy Data</summary>
+  
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  
+  <description>
+    <p>
+      Process X-ray Absorption Spectroscopy data using the Demeter package. This includes Athena, Artemis, and Hephaestus applications.
+    </p>
+    <p>
+      NOTE: This packaged is not verified by, affiliated with, or supported by Bruce Ravel.
+    </p>
+  </description>
+  
+  <releases>
+    <release version="0.9.27-898dcd2" date="2021-07-15"/>
+  </releases>
+</component>

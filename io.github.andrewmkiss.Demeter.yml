@@ -160,9 +160,12 @@ modules:
       - perl Build.PL
       - ./Build
       - ./Build install
+      - install -Dm 644 -t /app/share/metainfo io.github.andrewmkiss.Demeter.metainfo.xml
     post-install:
       - 'chmod u+w /app/lib/perl5/site_perl/5.36.1/x86_64-linux/auto/Ifeffit/Ifeffit.so'
     sources:
       - type: archive
         url: https://github.com/bruceravel/demeter/archive/refs/tags/0.9.27.tar.gz
         sha256: 642bc911756445a3f5f15057fa666d1d8fbdd0e3757fe70d324cb3c4be23e575
+      - type: file
+        path: io.github.andrewmkiss.Demeter.metainfo.xml
