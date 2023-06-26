@@ -7,6 +7,15 @@ This project began as a way to more easily install Demeter onto different machin
 This project was developed and tested on Fedora 38 in June 2023.
 
 ## Installation
+### Requirements
+- `flatpak`
+- `flatpak-builder` <br> This can be a prebuilt binary or built using `meson`. [Github link](https://github.com/flatpak/flatpak-builder)
+- `org.freedesktop.Sdk 22.08` <br> This is the SDK for building the Demeter flatpak and the necessary runtime environment. <br> `flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08` <br>
+
+### Optional
+- `flatpak-builder-tools` <br> Only required for modifying Perl libraries. This is required for generating the Perl dependencies. [Github link](https://github.com/flatpak/flatpak-builder-tools)
+
+### Building the flatpak
 Clone this repository and run `./build_flatpak.sh` from the `scripts/` directory.
 
 The script will run `flatpak-builder`. The installation reaches out and downloads source archives and files for all the individual modules and builds them. The build process takes about 25 min on my laptop. 
