@@ -161,6 +161,7 @@ modules:
         - PERLLIB=/app/lib/perl5/site_perl/5.36.1
     build-commands:
       - perl Build.PL
+      - sed -i "1653,+3s/25/35/" lib/Demeter/UI/Athena.pm
       - ./Build
       - ./Build install
       - install -Dm 644 -t /app/share/metainfo io.github.andrewmkiss.Demeter.metainfo.xml
