@@ -4,7 +4,8 @@ runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 command: dathena
 finish-args:
-  - --socket=wayland
+  # - --socket=wayland
+  # - --socket=fallback-x11
   - --socket=x11
   - --share=ipc
   - --filesystem=host
@@ -171,9 +172,9 @@ modules:
       - mv /app/share/icons/hicolor/48x48/apps/athena_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Athena.png
       - install -Dm 644 -t /app/share/icons/hicolor/48x48/apps /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Artemis/share/artemis_icon.png
       - mv /app/share/icons/hicolor/48x48/apps/artemis_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Artemis.png
-      - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Athena.desktop
-      - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Artemis.desktop
-      - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Hephaestus.desktop
+      - install -Dm 644 -t /app/share/applications desktop_icons/io.github.andrewmkiss.Demeter.Athena.desktop
+      - install -Dm 644 -t /app/share/applications desktop_icons/io.github.andrewmkiss.Demeter.Artemis.desktop
+      - install -Dm 644 -t /app/share/applications desktop_icons/io.github.andrewmkiss.Demeter.Hephaestus.desktop
     post-install:
       - 'chmod u+w /app/lib/perl5/site_perl/5.36.1/x86_64-linux/auto/Ifeffit/Ifeffit.so'
     sources:
