@@ -6,7 +6,9 @@
   
   <name>Demeter</name>
   <summary>Process X-ray Absorption Spectroscopy Data</summary>
-  <url>https://github.com/andrewmkiss/Demeter</url>
+  <url>
+    <homepage>https://github.com/andrewmkiss/Demeter</homepage>
+  </url>
   
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
@@ -22,18 +24,18 @@
   <screenshots>
     <screenshot type="default">
       <image>
-        https://raw.githubusercontent.com/andrewmkiss/Demeter/main/appimage/athena.png
+	https://github.com/andrewmkiss/Demeter/blob/main/appstream/athena.png?raw=true
       </image>
-      <caption>Demeter Athena main window.</caption>
+      <caption>Demeter Athena main window</caption>
     </screenshot>
     <screenshot type="default">
       <image>
-        https://raw.githubusercontent.com/andrewmkiss/Demeter/main/appimage/hephaestus.png
+        https://raw.githubusercontent.com/andrewmkiss/Demeter/main/appstream/hephaestus.png?raw=true
       </image>
-      <caption>Demeter Hephaestus main window.</caption>
+      <caption>Demeter Hephaestus main window</caption>
     </screenshot>
   </screenshots>
-  <icon type="remote" width="128" height="128">https://raw.githubusercontent.com/andrewmkiss/Demeter/main/appimage/DemeterIcon_128x128.png</icon>
+  <icon type="remote" width="128" height="128">https://raw.githubusercontent.com/andrewmkiss/Demeter/main/appimage/DemeterIcon_128x128.png?raw=true</icon>
   <developer_name>Andrew M. Kiss</developer_name>
   <content_rating type="oars-1.0" />
   <releases>
