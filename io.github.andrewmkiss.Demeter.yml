@@ -163,16 +163,13 @@ modules:
       - sed -i "1653,+3s/25/35/" lib/Demeter/UI/Athena.pm
       - ./Build
       - ./Build install
-      - install -Dm 644 -t /app/share/metainfo io.github.andrewmkiss.Demeter.metainfo.xml
-      - install -Dm 644 -t /app/share/icons/hicolor/48x48/apps /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/share/Demeter_icon.png
-      - mv /app/share/icons/hicolor/48x48/apps/Demeter_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.png
-      - install -Dm 644 -t /app/share/icons/hicolor/48x48/apps /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Athena/share/athena_icon.png
-      - mv /app/share/icons/hicolor/48x48/apps/athena_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Athena.png
-      - install -Dm 644 -t /app/share/icons/hicolor/48x48/apps /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Artemis/share/artemis_icon.png
-      - mv /app/share/icons/hicolor/48x48/apps/artemis_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Artemis.png
-      - install -Dm 444 -t /app/share/app-info/icons/flatpak/128x128/io.github.andrewmkiss.Demeter.png DemeterIcon_128x128.png
-      - install -Dm 444 -t /app/share/app-info/screenshots/x86_64/athena.png athena.png
-      - install -Dm 444 -t /app/share/app-info/screenshots/x86_64/hephaestus.png hephaestus.png
+      - install -Dm 644 io.github.andrewmkiss.Demeter.appdata.xml -t /app/share/metainfo 
+      - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/share/Demeter_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.png
+      - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Athena/share/athena_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Athena.png
+      - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Artemis/share/artemis_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Artemis.png
+      - install -Dm 644 DemeterIcon_128x128.png /app/share/app-info/icons/flatpak/128x128/io.github.andrewmkiss.Demeter.png
+      - install -Dm 644 athena.png /app/share/app-info/screenshots/x86_64/athena.png
+      - install -Dm 644 hephaestus.png /app/share/app-info/screenshots/x86_64/hephaestus.png
       - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Athena.desktop
       - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Artemis.desktop
       - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Hephaestus.desktop
@@ -184,7 +181,7 @@ modules:
         branch: master
         commit: edfaa0904fa30426cf303b5933450edf22a426ec
       - type: file
-        path: io.github.andrewmkiss.Demeter.metainfo.xml
+        path: io.github.andrewmkiss.Demeter.appdata.xml
       - type: file
         path: desktop_icons/io.github.andrewmkiss.Demeter.Athena.desktop
       - type: file
@@ -192,8 +189,8 @@ modules:
       - type: file
         path: desktop_icons/io.github.andrewmkiss.Demeter.Hephaestus.desktop
       - type: file
-        path: appstream/DemeterIcon_128x128.png
+        path: graphics/DemeterIcon_128x128.png
       - type: file
-        path: appstream/athena.png
+        path: graphics/athena.png
       - type: file
-        path: appstream/hephaestus.png
+        path: graphics/hephaestus.png
