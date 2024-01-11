@@ -630,11 +630,6 @@
   sha256: 19e143a3692c2c25a595e23834c2b318b912be1a92aa40ccd3e730cd097c152f
   type: archive
   url: https://cpan.metacpan.org/authors/id/E/ET/ETJ/Alien-HDF4-0.06.tar.gz
-  # dest: perl-libs/wxWidgets
-  ## Latest: wxWidgets 3.2.2.1
-  # - sha1: d645cacbf2678cfc402ae163f2b0e0b05be5d239
-  #   type: file
-  #   url: https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
   ## For wxWidgets 3.0.5.1
 - sha256: 440f6e73cf5afb2cbf9af10cec8da6cdd3d3998d527598a53db87099524ac807
   type: file
@@ -643,10 +638,6 @@
   type: file
   url: http://www.cpan.org/authors/id/M/MD/MDOOTSON/Wx-0.9932.tar.gz
   sha256: 1cfdb6535a0f4676e6f1aab2c9d8e16d577be3eb3b7cc04c8074d685e6651b70
-- type: archive
-  dest: perl-libs/demeter
-  url: https://github.com/bruceravel/demeter/archive/refs/tags/0.9.27.tar.gz
-  sha256: 642bc911756445a3f5f15057fa666d1d8fbdd0e3757fe70d324cb3c4be23e575
 - commands:
     - set -e
     - function make_install {
@@ -829,6 +820,7 @@
     - ./configure --with-gtk --prefix=${FLATPAK_DEST}
     - make
     - make install
+    - make clean
     - ldconfig
     # ## Install Alien-wxWidget
     - cd ../perl-libs/Alien-wxWidgets

@@ -1,6 +1,6 @@
 app-id: io.github.andrewmkiss.Demeter
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 command: dathena
 finish-args:
@@ -26,6 +26,7 @@ modules:
         - ctest -S HDF4config.cmake,BUILD_GENERATOR=Unix -C Release -V -O hdf4.log
         - cd build
         - make install
+        - make clean
         dest: hdf4_lib
         dest-filename: install.sh
         type: script
@@ -34,14 +35,14 @@ modules:
     disabled: false
     buildsystem: simple
     build-commands:
-      - ./configure --prefix=/app/
+      - ./configure --prefix=/app/ --without-qt
       - make
       - make install
       - make clean
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.8/gnuplot-5.4.8.tar.gz
-        sha256: 931279c7caad1aff7d46cb4766f1ff41c26d9be9daf0bcf0c79deeee3d91f5cf
+        url: https://sourceforge.net/projects/gnuplot/files/gnuplot/6.0.0/gnuplot-6.0.0.tar.gz
+        sha256: 635a28f0993f6ab0d1179e072ad39b8139d07f51237f841d93c6c2ff4b1758ec
 
   - name: ncurses
     disabled: false
@@ -53,25 +54,22 @@ modules:
       cppflags: '-fPIC'
       ldflags: '-fpic'
     sources:
-      - type: archive
-        url: https://invisible-island.net/datafiles/release/ncurses.tar.gz
-        sha256: 97fc51ac2b085d4cde31ef4d2c3122c21abc217e9090a43a30fc5ec21684e059
+      - type: git
+        url: https://github.com/mirror/ncurses.git
+      # branch: master
+        commit: 79b9071f2be20a24c7be031655a5638f6032f29f
 
   - name: ifeffit
     disabled: false
     buildsystem: simple
     build-commands:
-      - ./PGPLOT_install --prefix=/app/ --no-png --with-64bit
-      - ./configure --prefix=/app/
+      - FFLAGS="-g -O2 -fPIC" ./configure --prefix=/app/ --without-pgplot
       - sed -i "s/TERMCAP_LIB =.*/TERMCAP_LIB = -L\/app\/lib -lncurses/" src/cmdline/Makefile
       - make
       - make install
       - sed -i "s/\/run\/build.*/\/app\/lib\/libnopgplot.a/" /app/share/ifeffit/config/Config.mak
       - make clean
     sources:
-      - type: file
-        url: ftp://astro.caltech.edu/pub/pgplot/pgplot5.2.tar.gz
-        sha256: a5799ff719a510d84d26df4ae7409ae61fe66477e3f1e8820422a9a4727a5be4
       - type: archive
         url: https://github.com/newville/ifeffit/archive/refs/tags/1.2.13.tar.gz
         sha256: 46d8ea1b02ea81794c2afee41dd9d3d05fe1178cbd358ef6b9ecf2a77076d909
@@ -176,7 +174,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/bruceravel/demeter
-        branch: master
+      # branch: master
         commit: edfaa0904fa30426cf303b5933450edf22a426ec
       - type: file
         path: metainfo.xml
