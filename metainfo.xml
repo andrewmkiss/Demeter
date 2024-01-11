@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <id type="desktop">io.github.andrewmkiss.Demeter</id>
+<component type="desktop-application">
+  <id>io.github.andrewmkiss.Demeter</id>
   
   <name>Demeter</name>
   <summary>Process X-ray Absorption Spectroscopy Data</summary>
-  <url>
-    <homepage>https://github.com/andrewmkiss/Demeter</homepage>
-  </url>
+  <developer_name>Andrew M. Kiss</developer_name>  <!-- Maintainer-->
+  <url type="homepage">https://github.com/andrewmkiss/Demeter</url>
+  <content_rating type="oars-1.0" />
   
   <metadata_license>FSFAP</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
+  <project_license>FSFAP</project_license>
   
   <description>
     <p>
@@ -19,6 +19,8 @@
       NOTE: This packaged is not verified by, affiliated with, or supported by Bruce Ravel.
     </p>
   </description>
+
+  <icon type="remote" width="128" height="128">https://raw.githubusercontent.com/andrewmkiss/Demeter/main/graphics/DemeterIcon_128x128.png?raw=true</icon>
   <screenshots>
     <screenshot type="default">
       <image>
@@ -33,10 +35,12 @@
       <caption>Demeter Hephaestus main window</caption>
     </screenshot>
   </screenshots>
-  <icon type="remote" width="128" height="128">https://raw.githubusercontent.com/andrewmkiss/Demeter/main/graphics/DemeterIcon_128x128.png?raw=true</icon>
-  <developer_name>Andrew M. Kiss</developer_name>
-  <content_rating type="oars-1.0" />
+
   <releases>
-    <release version="0.9.26-edfaa09" date="2023-04-14"/>
+    <release version="1.0" date="2024-01-10">
+      <description>
+        <p>Demeter version 0.9.26-edfaa09</p>
+      </description>
+    </release>
   </releases>
-</application>
+</component>

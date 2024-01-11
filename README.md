@@ -1,10 +1,10 @@
 # Demeter Flatpak
-A flatpak spin of the Demeter XAS package by Bruce Ravel [Demeter Homepage](https://bruceravel.github.io/demeter/). This is an unofficial project and is **not** supported or maintained by the Demeter team. All questions and comments about this flatpak should stay within this repository.
+A flatpak repackaging of the Demeter XAS package by Bruce Ravel [Demeter Homepage](https://bruceravel.github.io/demeter/). This is an unofficial project and is **not** supported or maintained by the Demeter team. All questions and comments about this flatpak should stay within this repository.
 
 ## Development
 This project began as a way to more easily install Demeter onto different machines and OS installs. It is a personal project.
 
-This project was developed and tested on Fedora 38 in June 2023.
+This package was developed using the following scripts. It should be possible to build and install Demeter in this way. However, since this is now deployed to Flathub, I would recommend you simply download the container from Flathub.
 
 ## Installation
 ### Requirements
