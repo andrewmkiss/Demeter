@@ -33,12 +33,10 @@ modules:
 
   - name: gnuplot
     disabled: false
-    buildsystem: simple
-    build-commands:
-      - ./configure --prefix=/app/ --without-qt
-      - make
-      - make install
-      - make clean
+    buildsystem: autotools
+    config-opts:
+      - --prefix=/app
+      - --without-qt
     sources:
       - type: archive
         url: https://sourceforge.net/projects/gnuplot/files/gnuplot/6.0.0/gnuplot-6.0.0.tar.gz
@@ -48,7 +46,8 @@ modules:
     disabled: false
     buildsystem: autotools
     no-autogen: true
-    config-opts: --prefix=/usr
+    config-opts:
+      - --prefix=/app
     build-options:
       cflags: '-fPIC'
       cppflags: '-fPIC'
