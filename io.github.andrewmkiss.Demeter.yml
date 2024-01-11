@@ -56,7 +56,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/mirror/ncurses.git
-      # branch: master
         commit: 79b9071f2be20a24c7be031655a5638f6032f29f
 
   - name: ifeffit
@@ -165,7 +164,9 @@ modules:
       - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/share/Demeter_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.png
       - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Athena/share/athena_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Athena.png
       - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Artemis/share/artemis_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Artemis.png
+      - ffmpeg -i Demeter.png -s 128x128 -frames:v 1 Demeter_128x128.png
       - install -Dm 644 Demeter.png /app/share/app-info/icons/flatpak/512x512/io.github.andrewmkiss.Demeter.png
+      - install -Dm 644 Demeter_128x128.png /app/share/app-info/icons/flatpak/128x128/io.github.andrewmkiss.Demeter.png
       - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Athena.desktop
       - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Artemis.desktop
       - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Hephaestus.desktop

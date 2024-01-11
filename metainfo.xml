@@ -4,7 +4,7 @@
   
   <name>Demeter</name>
   <summary>Process X-ray Absorption Spectroscopy Data</summary>
-  <developer_name>Andrew M. Kiss</developer_name>  <!-- Maintainer-->
+  <developer_name>Andrew M. Kiss (maintainer)</developer_name>  <!-- Maintainer -->
   <url type="homepage">https://github.com/andrewmkiss/Demeter</url>
   <content_rating type="oars-1.0" />
   
@@ -20,9 +20,7 @@
     </p>
   </description>
 
-  <icon type="remote" width="512" height="512">
-    https://raw.githubusercontent.com/bruceravel/demeter/master/lib/Demeter/share/Demeter.png?raw=true
-  </icon>
+  <icon type="remote" width="512" height="512">https://raw.githubusercontent.com/bruceravel/demeter/master/lib/Demeter/share/Demeter.png?raw=true</icon>
 
   <screenshots>
     <screenshot type="default">
