@@ -6,5 +6,7 @@ without any warranty.
 
 To be clear, the software in this repository is for building a Flatpak
 that is comprised of several software packages. This repository is
-subject to the above licensing. Any software that this repository
-pulls from maintains its own terms and licensing.
+subject to the above licensing.
+
+Any software that this repository pulls from maintains its own terms
+and licensing.
