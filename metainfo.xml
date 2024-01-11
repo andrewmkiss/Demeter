@@ -20,17 +20,17 @@
     </p>
   </description>
 
-  <icon type="remote" width="128" height="128">https://raw.githubusercontent.com/andrewmkiss/Demeter/main/graphics/DemeterIcon_128x128.png?raw=true</icon>
+  <icon type="remote" width="128" height="128">https://raw.githubusercontent.com/andrewmkiss/Demeter/main/images/icon_Demeter_128x128.png?raw=true</icon>
   <screenshots>
     <screenshot type="default">
       <image>
-	https://github.com/andrewmkiss/Demeter/blob/main/graphics/athena.png?raw=true
+	https://github.com/andrewmkiss/Demeter/blob/main/images/screenshot_Athena.png?raw=true
       </image>
       <caption>Demeter Athena main window</caption>
     </screenshot>
     <screenshot type="default">
       <image>
-        https://raw.githubusercontent.com/andrewmkiss/Demeter/main/graphics/hephaestus.png?raw=true
+        https://raw.githubusercontent.com/andrewmkiss/Demeter/main/images/screenshot_Hephaestus.png?raw=true
       </image>
       <caption>Demeter Hephaestus main window</caption>
     </screenshot>
