@@ -56,7 +56,6 @@ modules:
       - make
       - make install
       - sed -i "s/\/run\/build.*/\/app\/lib\/libnopgplot.a/" /app/share/ifeffit/config/Config.mak
-      - make clean
     sources:
       - type: archive
         url: https://github.com/newville/ifeffit/archive/refs/tags/1.2.13.tar.gz
