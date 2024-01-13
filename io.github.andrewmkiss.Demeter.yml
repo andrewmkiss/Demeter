@@ -75,8 +75,8 @@ modules:
       ldflags: '-fpic'
     sources:
       - type: archive
-        url: https://www.cpan.org/src/5.0/perl-5.36.1.tar.gz
-        sha256: 68203665d8ece02988fc77dc92fccbb297a83a4bb4b8d07558442f978da54cc1
+        url: https://www.cpan.org/src/5.0/perl-5.38.2.tar.gz
+        sha256: a0a31534451eb7b83c7d6594a497543a54d488bc90ca00f5e34762577f40655e
       - type: shell
         commands:
           # Have Flatpak run the GNU-compatible configure script.
@@ -142,16 +142,16 @@ modules:
     build-options:
       env:
         - PERL5LIB=/run/build/demeter:/app/lib/perl5/site_perl
-        - PERLLIB=/app/lib/perl5/site_perl/5.36.1
+        - PERLLIB=/app/lib/perl5/site_perl/5.38.2
     build-commands:
       - perl Build.PL
-      - sed -i "1653,+3s/25/35/" lib/Demeter/UI/Athena.pm
+      - sed -i "1653,+3s/25/35/" lib/Demeter/UI/Athena.pm  # Change width of button from 25 to 35 px
       - ./Build
       - ./Build install
       - install -Dm 644 metainfo.xml /app/share/metainfo/io.github.andrewmkiss.Demeter.metainfo.xml
-      - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/share/Demeter_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.png
-      - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Athena/share/athena_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Athena.png
-      - install -Dm 644 /app/lib/perl5/site_perl/5.36.1/x86_64-linux/Demeter/UI/Artemis/share/artemis_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Artemis.png
+      - install -Dm 644 /app/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/share/Demeter_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.png
+      - install -Dm 644 /app/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/UI/Athena/share/athena_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Athena.png
+      - install -Dm 644 /app/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/UI/Artemis/share/artemis_icon.png /app/share/icons/hicolor/48x48/apps/io.github.andrewmkiss.Demeter.Artemis.png
       - ffmpeg -i Demeter.png -s 128x128 -frames:v 1 Demeter_128x128.png
       - install -Dm 644 Demeter.png /app/share/app-info/icons/flatpak/512x512/io.github.andrewmkiss.Demeter.png
       - install -Dm 644 Demeter_128x128.png /app/share/app-info/icons/flatpak/128x128/io.github.andrewmkiss.Demeter.png
@@ -159,7 +159,7 @@ modules:
       - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Artemis.desktop
       - install -Dm 644 -t /app/share/applications io.github.andrewmkiss.Demeter.Hephaestus.desktop
     post-install:
-      - 'chmod u+w /app/lib/perl5/site_perl/5.36.1/x86_64-linux/auto/Ifeffit/Ifeffit.so'
+      - 'chmod u+w /app/lib/perl5/site_perl/5.38.2/x86_64-linux/auto/Ifeffit/Ifeffit.so'
     sources:
       - type: git
         url: https://github.com/bruceravel/demeter
