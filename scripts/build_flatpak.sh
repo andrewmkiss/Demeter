@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUILDDIR="build-dir"
+BUILDDIR="builddir"
 BUILDLOG="build.log"
 BUILDYML="io.github.andrewmkiss.Demeter.yml"
 if [ ${PWD##*/} == "scripts" ]; then

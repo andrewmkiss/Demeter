@@ -12,8 +12,8 @@ fi
 # Banner
 echo "Cleaning Flatpak directories..."
 # Delete the build directory
-echo "  Deleting build-dir..."
-rm -rf build-dir
+echo "  Deleting builddir..."
+rm -rf builddir
 
 # Delete the hidden build directories
 # Leave the downloaded files
