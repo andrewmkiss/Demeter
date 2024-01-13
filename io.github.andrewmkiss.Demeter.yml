@@ -9,27 +9,17 @@ finish-args:
   - --filesystem=host
 
 modules:
-  - name: hdf4_lib
+  - name: hdf4
     disabled: false 
     buildsystem: simple
-    no-autogen: true
+    subdir: CMake-hdf-4.2.16
     build-commands:
-      - 'hdf4_lib/install.sh'
+      - sh build-unix.sh
+      - cmake --install build --prefix=/app
     sources:
       - type: archive
         url: https://support.hdfgroup.org/ftp/HDF/releases/HDF4.2.16/src/CMake-hdf-4.2.16.tar.gz
         sha256: e8115564daa913c274f88558c2bc5d6685ef51531c80bf95f6dd92ced1f7b64f
-      - commands:
-        - set -e
-        - cd CMake-hdf-4.2.16/
-        - sed -i "79s/set.*/set \( INSTALLDIR \"\/app\")/" HDF4config.cmake
-        - ctest -S HDF4config.cmake,BUILD_GENERATOR=Unix -C Release -V -O hdf4.log
-        - cd build
-        - make install
-        - make clean
-        dest: hdf4_lib
-        dest-filename: install.sh
-        type: script
 
   - name: gnuplot
     disabled: false
