@@ -631,9 +631,9 @@
   type: archive
   url: https://cpan.metacpan.org/authors/id/E/ET/ETJ/Alien-HDF4-0.06.tar.gz
   ## For wxWidgets 3.0.5.1
-- sha256: 440f6e73cf5afb2cbf9af10cec8da6cdd3d3998d527598a53db87099524ac807
-  type: file
-  url: https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5.1/wxWidgets-3.0.5.1.tar.bz2
+# sha256: 440f6e73cf5afb2cbf9af10cec8da6cdd3d3998d527598a53db87099524ac807
+# type: file
+# url: https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5.1/wxWidgets-3.0.5.1.tar.bz2
 - dest: perl-libs/Wx
   type: file
   url: http://www.cpan.org/authors/id/M/MD/MDOOTSON/Wx-0.9932.tar.gz
@@ -814,16 +814,8 @@
     - (make_install perl-libs/Test-Differences)
     - (make_install perl-libs/Module-Pluggable)
     - (make_install perl-libs/ExtUtils-XSpp)
-    # ## Install wxWidgets
-    - tar -xjf wxWidgets-3.0.5.1.tar.bz2
-    - cd wxWidgets-3.0.5.1
-    - ./configure --with-gtk --prefix=${FLATPAK_DEST}
-    - make
-    - make install
-    - make clean
-    - ldconfig
     # ## Install Alien-wxWidget
-    - cd ../perl-libs/Alien-wxWidgets
+    - cd perl-libs/Alien-wxWidgets
     - perl Build.PL --wxWidgets-build=0
     - ./Build
     - ./Build install

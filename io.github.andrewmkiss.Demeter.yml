@@ -9,13 +9,27 @@ finish-args:
   - --filesystem=host
 
 modules:
+  - name: wxWidgets  ## wxWidgets 3.0.5.1
+    disabled: false
+    buildsystem: autotools
+    no-autogen: true
+    subdir: 
+    config-opts:
+      - --with-gtk
+    build-opts:
+      - -j4
+    sources:
+      - type: git
+        url: https://github.com/wxWidgets/wxWidgets.git
+        commit: 2740737b40d30817b474e30ff76e43f0903c2e97
+  
   - name: hdf4
-    disabled: false 
+    disabled: false
     buildsystem: simple
     subdir: CMake-hdf-4.2.16
     build-commands:
       - sh build-unix.sh
-      - cmake --install build --prefix=/app
+      - cmake --install build --prefix=${FLATPAK_DEST}
     sources:
       - type: archive
         url: https://support.hdfgroup.org/ftp/HDF/releases/HDF4.2.16/src/CMake-hdf-4.2.16.tar.gz
@@ -25,7 +39,6 @@ modules:
     disabled: false
     buildsystem: autotools
     config-opts:
-      - --prefix=/app
       - --without-qt
     sources:
       - type: archive
@@ -36,8 +49,6 @@ modules:
     disabled: false
     buildsystem: autotools
     no-autogen: true
-    config-opts:
-      - --prefix=/app
     build-options:
       cflags: '-fPIC'
       cppflags: '-fPIC'
@@ -49,12 +60,12 @@ modules:
 
   - name: ifeffit
     disabled: false
-    buildsystem: simple
-    build-commands:
-      - FFLAGS="-g -O2 -fPIC" ./configure --prefix=/app/ --without-pgplot
-      - sed -i "s/TERMCAP_LIB =.*/TERMCAP_LIB = -L\/app\/lib -lncurses/" src/cmdline/Makefile
-      - make
-      - make install
+    buildsystem: autotools
+    config-opts:
+      - --without-pgplot
+      - FFLAGS=-g -O2 -fPIC -std=legacy
+      - --with-termcap-link=-lncurses
+    post-install:
       - sed -i "s/\/run\/build.*/\/app\/lib\/libnopgplot.a/" /app/share/ifeffit/config/Config.mak
     sources:
       - type: archive
