@@ -174,8 +174,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/bruceravel/demeter
-      # branch: master
-        commit: edfaa0904fa30426cf303b5933450edf22a426ec
+        commit: edfaa0904fa30426cf303b5933450edf22a426ec  # v0.9.27 Feb 8, 2023
       - type: file
         path: metainfo.xml
       - type: file

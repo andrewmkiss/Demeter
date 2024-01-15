@@ -7,7 +7,7 @@
   <developer_name>Andrew M. Kiss (flatpak)</developer_name>  <!-- Maintainer -->
   <url type="homepage">http://bruceravel.github.io/demeter/</url>
   <url type="help">https://github.com/andrewmkiss/Demeter</url>
-  <content_rating type="oars-1.0" />
+  <content_rating type="oars-1.1" />
   
   <metadata_license>FSFAP</metadata_license>
   <project_license>FSFAP</project_license>
