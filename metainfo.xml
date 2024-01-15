@@ -6,7 +6,6 @@
   <summary>Process X-ray Absorption Spectroscopy Data</summary>
   <developer_name>Demeter Team</developer_name>
   <url type="homepage">http://bruceravel.github.io/demeter/</url>
-  <url type="help">https://github.com/andrewmkiss/Demeter</url>
   <content_rating type="oars-1.1" />
   
   <metadata_license>Artistic-1.0-Perl</metadata_license>
@@ -46,9 +45,9 @@
   </screenshots>
 
   <releases>
-    <release version="0.9.26-1.0" date="2024-01-14">
+    <release version="0.9.27-1.0" date="2024-01-14">
       <description>
-        <p>Demeter version 0.9.26-edfaa09</p>
+        <p>Demeter version 0.9.27-edfaa09</p>
       </description>
     </release>
   </releases>
