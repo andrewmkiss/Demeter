@@ -6,6 +6,6 @@ Name=Athena
 Comment=Process X-ray Absorption Spectroscopy Data
 Categories=Science;Physics;
 
-Icon=io.github.andrewmkiss.Demeter.Athena
+Icon=io.github.bruceravel.Demeter.Athena
 Exec=dathena
 Terminal=false

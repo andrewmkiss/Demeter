@@ -22,6 +22,9 @@
   </description>
 
   <icon type="remote" width="512" height="512">https://raw.githubusercontent.com/bruceravel/demeter/master/lib/Demeter/share/Demeter.png?raw=true</icon>
+  <launchable type="desktop-id">io.github.bruceravel.Demeter.Artemis.desktop</launchable>
+  <launchable type="desktop-id">io.github.bruceravel.Demeter.Athena.desktop</launchable>
+  <launchable type="desktop-id">io.github.bruceravel.Demeter.Hephaestus.desktop</launchable>
 
   <screenshots>
     <screenshot type="default">

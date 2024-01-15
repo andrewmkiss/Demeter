@@ -159,13 +159,13 @@ modules:
       - sed -i "1653,+3s/25/35/" lib/Demeter/UI/Athena.pm  # Change width of button from 25 to 35 px
       - ./Build
       - ./Build install
-      - install -Dm 644 /app/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/share/Demeter_icon.png /app/share/icons/hicolor/48x48/apps/io.github.bruceravel.Demeter.png
-      - install -Dm 644 /app/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/UI/Athena/share/athena_icon.png /app/share/icons/hicolor/48x48/apps/io.github.bruceravel.Demeter.Athena.png
-      - install -Dm 644 /app/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/UI/Artemis/share/artemis_icon.png /app/share/icons/hicolor/48x48/apps/io.github.bruceravel.Demeter.Artemis.png
-      - install -Dm 644 -t /app/share/applications io.github.bruceravel.Demeter.Athena.desktop
-      - install -Dm 644 -t /app/share/applications io.github.bruceravel.Demeter.Artemis.desktop
-      - install -Dm 644 -t /app/share/applications io.github.bruceravel.Demeter.Hephaestus.desktop
-      - install -Dm 644 metainfo.xml /app/share/metainfo/io.github.bruceravel.Demeter.metainfo.xml
+      - install -Dm 644 ${FLATPAK_DEST}/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/share/Demeter_icon.png ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/io.github.bruceravel.Demeter.png
+      - install -Dm 644 ${FLATPAK_DEST}/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/UI/Athena/share/athena_icon.png ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/io.github.bruceravel.Demeter.Athena.png
+      - install -Dm 644 ${FLATPAK_DEST}/lib/perl5/site_perl/5.38.2/x86_64-linux/Demeter/UI/Artemis/share/artemis_icon.png ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/io.github.bruceravel.Demeter.Artemis.png
+      - install -Dm 644 -t ${FLATPAK_DEST}/share/applications io.github.bruceravel.Demeter.Athena.desktop
+      - install -Dm 644 -t ${FLATPAK_DEST}/share/applications io.github.bruceravel.Demeter.Artemis.desktop
+      - install -Dm 644 -t ${FLATPAK_DEST}/share/applications io.github.bruceravel.Demeter.Hephaestus.desktop
+      - install -Dm 644 metainfo.xml ${FLATPAK_DEST}/share/metainfo/io.github.bruceravel.Demeter.metainfo.xml
     post-install:
       - 'chmod u+w /app/lib/perl5/site_perl/5.38.2/x86_64-linux/auto/Ifeffit/Ifeffit.so'
     sources:
@@ -180,6 +180,3 @@ modules:
         path: desktop_files/io.github.bruceravel.Demeter.Artemis.desktop
       - type: file
         path: desktop_files/io.github.bruceravel.Demeter.Hephaestus.desktop
-      - type: file
-        url: https://raw.githubusercontent.com/bruceravel/demeter/master/lib/Demeter/share/Demeter.png?raw=true
-        sha256: 90f84af769e2a98ccb4a55b717da82d145e1f26d94a0b9bdf4035d19e3beca68

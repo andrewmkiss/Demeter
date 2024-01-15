@@ -6,6 +6,6 @@ Name=Hephaestus
 Comment=Process X-ray Absorption Spectroscopy Data
 Categories=Science;Physics;
 
-Icon=io.github.andrewmkiss.Demeter
+Icon=io.github.bruceravel.Demeter
 Exec=dhephaestus
 Terminal=false
