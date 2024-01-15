@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.andrewmkiss.Demeter</id>
+  <id>io.github.bruceravel.Demeter</id>
   
   <name>Demeter</name>
   <summary>Process X-ray Absorption Spectroscopy Data</summary>
-  <developer_name>Andrew M. Kiss (flatpak)</developer_name>  <!-- Maintainer -->
+  <developer_name>Demeter Team</developer_name>
   <url type="homepage">http://bruceravel.github.io/demeter/</url>
   <url type="help">https://github.com/andrewmkiss/Demeter</url>
   <content_rating type="oars-1.1" />
   
-  <metadata_license>FSFAP</metadata_license>
-  <project_license>FSFAP</project_license>
+  <metadata_license>Artistic-1.0-Perl</metadata_license>
+  <project_license>Artistic-1.0-Perl</project_license>
   
   <description>
     <p>
       Process X-ray Absorption Spectroscopy data using the Demeter package. This includes Athena, Artemis, and Hephaestus applications.
     </p>
     <p>
-      NOTE: This packaged is not verified by, affiliated with, or supported by Bruce Ravel.
+      To cite Demeter in a publication, use: <br>
+      B. Ravel and M. Newville, ATHENA, ARTEMIS, HEPHAESTUS: data analysis for X-ray absorption spectroscopy using IFEFFIT, Journal of Synchrotron Radiation 12, 537–541 (2005) doi:10.1107/S0909049505012719.
     </p>
   </description>
 
@@ -26,20 +27,26 @@
   <screenshots>
     <screenshot type="default">
       <image>
-	https://github.com/andrewmkiss/Demeter/blob/main/images/screenshot_Athena.png?raw=true
+        https://github.com/bruceravel/demeter/blob/master/documentation/_images/athena_withdata.png?raw=true
       </image>
-      <caption>Demeter Athena main window</caption>
+      <caption>Athena main window</caption>
     </screenshot>
     <screenshot type="default">
       <image>
-        https://raw.githubusercontent.com/andrewmkiss/Demeter/main/images/screenshot_Hephaestus.png?raw=true
+        https://github.com/bruceravel/demeter/blob/master/documentation/_images/fes2-firstshellfit.png?raw=true
       </image>
-      <caption>Demeter Hephaestus main window</caption>
+      <caption>Artemis main window</caption>
+    </screenshot>
+    <screenshot type="default">
+      <image>
+        https://github.com/bruceravel/demeter/blob/master/documentation/_images/Hephaestus_absorption.png?raw=true
+      </image>
+      <caption>Hephaestus main window</caption>
     </screenshot>
   </screenshots>
 
   <releases>
-    <release version="1.0-0.9.26" date="2024-01-11">
+    <release version="0.9.26-1.0" date="2024-01-14">
       <description>
         <p>Demeter version 0.9.26-edfaa09</p>
       </description>
